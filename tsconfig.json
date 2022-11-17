@@ -4,6 +4,9 @@
     "paths":{
       "@app-domain": [
         "app/index.ts"
+      ],
+      "@app-components": [
+        "components/index.ts"
       ]
     },
     "target": "es5",
