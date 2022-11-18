@@ -9,3 +9,17 @@ body {
 body.light-theme {
   background-color: #ecf0f1;
 }
+
+body button.light-theme-button {
+  background-color: #ffffff;
+}
+body button.dark-theme-button {
+  background-color: #ff7675;
+}
+
+body.light-theme button.light-theme-button {
+  background-color: #ff7675;
+}
+body.light-theme button.dark-theme-button {
+  background-color: #ffffff;
+}
