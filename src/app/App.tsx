@@ -5,8 +5,10 @@ function App() {
   return (
     <AppLayout>
       <Fragment>
-        {'App'}
         <ThemeNavbar />
+        <div className={'flex items-center justify-center'}>
+          <h1 className={'title'}>{'jakubwilk.pl'}</h1>
+        </div>
       </Fragment>
     </AppLayout>
   )

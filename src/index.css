@@ -3,23 +3,37 @@
 @tailwind utilities;
 
 body {
-  background-color: #2c3e50;
+    background-color: #2c3e50;
+    height: 100%;
 }
 
 body.light-theme {
-  background-color: #ecf0f1;
+    background-color: #ecf0f1;
 }
 
 body button.light-theme-button {
-  background-color: #ffffff;
+    background-color: #ffffff;
 }
+
 body button.dark-theme-button {
-  background-color: #ff7675;
+    background-color: #ff7675;
 }
 
 body.light-theme button.light-theme-button {
-  background-color: #ff7675;
+    background-color: #ff7675;
 }
+
 body.light-theme button.dark-theme-button {
-  background-color: #ffffff;
+    background-color: #ffffff;
+}
+
+body .title {
+    color: #ecf0f1;
+    font-weight: bold;
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
+body.light-theme .title {
+    color: #2b2b2b;
 }
