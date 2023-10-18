@@ -6,6 +6,18 @@
       ],
       "@components/*": [
         "./src/components/*"
+      ],
+      "@context/*": [
+        "./src/context/*"
+      ],
+      "@enums/*": [
+        "./src/enums/*"
+      ],
+      "@hooks/*": [
+        "./src/hooks/*"
+      ],
+      "@models/*": [
+        "./src/models/*"
       ]
     },
     "target": "es5",
