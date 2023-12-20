@@ -15,6 +15,9 @@ export default function HeaderLanguageSwitcher() {
   const handleLanguage = useCallback(
     (lang: LanguageTypesEnum) => {
       handleSetLanguage(lang)
+      if (typeof window !== 'undefined') {
+        localStorage.setItem('lang', lang)
+      }
     },
     [handleSetLanguage],
   )

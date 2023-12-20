@@ -5,5 +5,7 @@
   "languagePolish": "Zmień język na polski",
   "languageEnglish": "Change language to english",
   "themeLight": "Switch to light theme",
-  "themeDark": "Switch to dark theme"
+  "themeDark": "Switch to dark theme",
+  "pageTitle": "Jakub Wilk | Programmer",
+  "pageDescription": "Jakub Wilk | Front-End developer working with React and TypeScript tech, NodeJS and video games after hours"
 }

@@ -1,14 +1,20 @@
 import { ReactNode } from 'react'
+import { getTranslation } from '@utils/locale.utils'
 import { Poppins } from 'next/font/google'
 
 import './globals.css'
 
 const poppins = Poppins({ subsets: ['latin-ext'], weight: ['300', '400', '700'] })
 
-export const metadata = {
-  title: 'Jakub Wilk | Developer',
-  description:
-    'Jakub Wilk | Front-End developer pracujący głównie w technologii React i TypeScript, zaś po godzinach NodeJS i przeróżne gry',
+// eslint-disable-next-line no-unused-vars
+export async function generateMetadata({ params }: any) {
+  // @ts-ignore
+  const { translate } = getTranslation()
+
+  return {
+    title: translate('pageTitle'),
+    description: translate('pageDescription'),
+  }
 }
 
 interface IProps {

@@ -24,6 +24,9 @@
       ],
       "@config/*": [
         "./src/config/*"
+      ],
+      "@utils/*": [
+        "./src/utils/*"
       ]
     },
     "target": "es5",
