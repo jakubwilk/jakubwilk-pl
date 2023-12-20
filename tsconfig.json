@@ -18,6 +18,12 @@
       ],
       "@models/*": [
         "./src/models/*"
+      ],
+      "@locales/*": [
+        "./src/locales/*"
+      ],
+      "@config/*": [
+        "./src/config/*"
       ]
     },
     "target": "es5",

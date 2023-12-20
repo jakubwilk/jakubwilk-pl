@@ -2,11 +2,13 @@
 import { useEffect } from 'react'
 import { ThemeTypesEnum } from '@enums/ThemeEnums'
 import { useThemeContext } from '@hooks/useThemeContext'
+import { useTranslation } from '@hooks/useTranslation'
 
 import Header from '@/components/Header'
 
 export default function HomePage() {
   const { theme } = useThemeContext()
+  const { t } = useTranslation()
 
   useEffect(() => {
     if (theme === ThemeTypesEnum.LIGHT) {
@@ -23,10 +25,10 @@ export default function HomePage() {
       <Header />
       <main className={'flex flex-col items-center justify-center min-h-screen px-4'}>
         <h1 className={'pb-4 title'}>
-          {'👋 Cześć, jestem '}
-          <span>{'Jakub'}</span>
+          {`👋 ${t('greetings')} `}
+          <span>{t('name')}</span>
         </h1>
-        <p className={'description'}>{'Programista Front-End'}</p>
+        <p className={'description'}>{t('description')}</p>
       </main>
     </div>
   )

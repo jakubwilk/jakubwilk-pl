@@ -1,0 +1,9 @@
+{
+  "greetings": "Cześć, jestem ",
+  "name": "Jakub",
+  "description": "Programista Front-End",
+  "languagePolish": "Zmień język na polski",
+  "languageEnglish": "Change language to english",
+  "themeLight": "Zmień motyw na jasny",
+  "themeDark": "Zmień motyw na ciemny"
+}

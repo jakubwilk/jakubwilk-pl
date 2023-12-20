@@ -3,9 +3,11 @@
 import { useCallback, useMemo } from 'react'
 import { LanguageTypesEnum } from '@enums/LanguageEnum'
 import { useLanguageContext } from '@hooks/useLanguageContext'
+import { useTranslation } from '@hooks/useTranslation'
 import { clsx } from 'clsx'
 
 export default function HeaderLanguageSwitcher() {
+  const { t } = useTranslation()
   const { lang, handleSetLanguage } = useLanguageContext()
 
   const isPolishLanguage = useMemo(() => lang === LanguageTypesEnum.POLAND, [lang])
@@ -25,9 +27,9 @@ export default function HeaderLanguageSwitcher() {
           isPolishLanguage && 'button-polish-active',
         )}
         onClick={() => handleLanguage(LanguageTypesEnum.POLAND)}
-        title={'Zmień na tryb ciemny'}
+        title={t('languagePolish')}
       >
-        {'PL'}
+        {'🇵🇱'}
       </button>
       <button
         className={clsx(
@@ -35,9 +37,9 @@ export default function HeaderLanguageSwitcher() {
           !isPolishLanguage && 'button-english-active',
         )}
         onClick={() => handleLanguage(LanguageTypesEnum.ENGLAND)}
-        title={'Zmień na tryb jasny'}
+        title={t('languageEnglish')}
       >
-        {'EN'}
+        {'🇬🇧'}
       </button>
     </div>
   )

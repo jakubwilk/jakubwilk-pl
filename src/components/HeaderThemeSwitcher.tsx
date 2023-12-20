@@ -3,10 +3,12 @@
 import { useCallback, useMemo } from 'react'
 import { ThemeTypesEnum } from '@enums/ThemeEnums'
 import { useThemeContext } from '@hooks/useThemeContext'
+import { useTranslation } from '@hooks/useTranslation'
 import { clsx } from 'clsx'
 
 export default function HeaderThemeSwitcher() {
   const { theme, handleSetTheme } = useThemeContext()
+  const { t } = useTranslation()
 
   const isThemeLight = useMemo(() => theme === ThemeTypesEnum.LIGHT, [theme])
 
@@ -22,14 +24,14 @@ export default function HeaderThemeSwitcher() {
       <button
         className={clsx('w-[50px] h-[50px]', !isThemeLight && 'button-dark-active')}
         onClick={() => handleTheme(ThemeTypesEnum.DARK)}
-        title={'Zmień na tryb ciemny'}
+        title={t('themeDark')}
       >
         {'🌑'}
       </button>
       <button
         className={clsx('w-[50px] h-[50px]', isThemeLight && 'button-light-active')}
         onClick={() => handleTheme(ThemeTypesEnum.LIGHT)}
-        title={'Zmień na tryb jasny'}
+        title={t('themeLight')}
       >
         {'🌕'}
       </button>

@@ -1,0 +1,9 @@
+{
+  "greetings": "Hello, I am ",
+  "name": "Jakub",
+  "description": "Front-End Developer",
+  "languagePolish": "Zmień język na polski",
+  "languageEnglish": "Change language to english",
+  "themeLight": "Switch to light theme",
+  "themeDark": "Switch to dark theme"
+}
