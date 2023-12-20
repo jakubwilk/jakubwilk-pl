@@ -20,21 +20,24 @@ export default function HeaderLanguageSwitcher() {
   return (
     <div className={'flex items-center'}>
       <button
-        className={clsx('w-[50px] h-[50px]', isPolishLanguage && 'button-polish-active')}
+        className={clsx(
+          'w-[50px] h-[50px] button-language',
+          isPolishLanguage && 'button-polish-active',
+        )}
         onClick={() => handleLanguage(LanguageTypesEnum.POLAND)}
         title={'Zmień na tryb ciemny'}
       >
-        {'🇵🇱 PL'}
+        {'PL'}
       </button>
       <button
         className={clsx(
-          'w-[50px] h-[50px]',
+          'w-[50px] h-[50px] button-language',
           !isPolishLanguage && 'button-english-active',
         )}
         onClick={() => handleLanguage(LanguageTypesEnum.ENGLAND)}
         title={'Zmień na tryb jasny'}
       >
-        {'🇬🇧 EN'}
+        {'EN'}
       </button>
     </div>
   )
