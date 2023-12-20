@@ -18,11 +18,11 @@ export default function SocialsGridItem({
   icon,
 }: IProps) {
   return (
-    <a className={'flex p-4 card'} href={link} title={title}>
+    <a className={'flex p-8 w-full max-w-[350px] card'} href={link} title={title}>
       {icon}
       <div className={'flex justify-start flex-col pl-2'}>
-        <h2>{name}</h2>
-        <p>{description}</p>
+        <h2 className={'social-title'}>{name}</h2>
+        <p className={'social-description'}>{description}</p>
       </div>
     </a>
   )

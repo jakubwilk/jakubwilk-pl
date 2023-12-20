@@ -23,7 +23,9 @@ export default function HomePage() {
   return (
     <div className={'container mx-auto relative'}>
       <Header />
-      <main className={'flex flex-col items-center justify-center min-h-screen px-4'}>
+      <main
+        className={'flex flex-col items-center justify-center min-h-screen py-24 px-4'}
+      >
         <h1 className={'pb-4 title'}>
           {`👋 ${t('greetings')} `}
           <span>{t('name')}</span>

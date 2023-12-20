@@ -83,3 +83,40 @@
 .dark-theme .description {
   color: #a6a6a6;
 }
+
+.card {
+  transition: all .1s ease-in-out;
+}
+
+.light-theme .card {
+  border: 1px solid #a6a6a6;
+}
+
+.dark-theme .card {
+  border: 1px solid #6a6a6a;
+}
+
+.social-title {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.15rem
+}
+
+.social-description {
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+.light-theme .social-description {
+  color: #6a6a6a;
+}
+
+.dark-theme .social-description {
+  color: #a6a6a6;
+}
+
+.light-theme .card:hover,
+.light-theme .card:focus {
+  transform: translateY(-10%);
+}
