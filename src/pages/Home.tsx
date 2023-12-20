@@ -22,8 +22,11 @@ export default function HomePage() {
     <div className={'container mx-auto relative'}>
       <Header />
       <main className={'flex flex-col items-center justify-center min-h-screen px-4'}>
-        <h1>{'👋 Cześć, jestem Jakub'}</h1>
-        <p>{'Jestem programistą Front-End'}</p>
+        <h1 className={'pb-4 title'}>
+          {'👋 Cześć, jestem '}
+          <span>{'Jakub'}</span>
+        </h1>
+        <p className={'description'}>{'Programista Front-End'}</p>
       </main>
     </div>
   )

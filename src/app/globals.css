@@ -59,3 +59,27 @@
   background-color: #f4f4f4;
   color: #2b2b2b;
 }
+
+.title {
+  font-size: 3rem;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.title > span {
+  font-weight: 700;
+}
+
+.description {
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.light-theme .description {
+  color: #6a6a6a;
+}
+
+.dark-theme .description {
+  color: #a6a6a6;
+}

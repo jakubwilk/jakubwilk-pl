@@ -3,7 +3,7 @@ import { Poppins } from 'next/font/google'
 
 import './globals.css'
 
-const poppins = Poppins({ subsets: ['latin-ext'], weight: '400' })
+const poppins = Poppins({ subsets: ['latin-ext'], weight: ['300', '400', '700'] })
 
 export const metadata = {
   title: 'Jakub Wilk | Developer',
