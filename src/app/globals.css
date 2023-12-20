@@ -33,3 +33,15 @@
   color: #2b2b2b;
   background-color: #f4f4f4;
 }
+
+.dark-theme *::-moz-selection,
+.dark-theme *::selection {
+  color: #2b2b2b;
+  background-color: #f4f4f4;
+}
+
+.light-theme *::-moz-selection,
+.light-theme *::selection {
+  color: #f4f4f4;
+  background-color: #2b2b2b;
+}

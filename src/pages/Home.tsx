@@ -8,8 +8,6 @@ import Header from '@/components/Header'
 export default function HomePage() {
   const { theme } = useThemeContext()
 
-  console.log('theme', theme)
-
   useEffect(() => {
     if (theme === ThemeTypesEnum.LIGHT) {
       document.body.classList.add('light-theme')
@@ -21,10 +19,11 @@ export default function HomePage() {
   }, [theme])
 
   return (
-    <div className={'container mx-auto'}>
+    <div className={'container mx-auto relative'}>
       <Header />
-      <main className={'flex items-center justify-center min-h-screen'}>
-        <h1>{'Comming soon'}</h1>
+      <main className={'flex flex-col items-center justify-center min-h-screen'}>
+        <h1>{'👋 Cześć, jestem Jakub'}</h1>
+        <p>{'Jestem programistą Front-End'}</p>
       </main>
     </div>
   )

@@ -1,5 +1,6 @@
 'use client'
 import { ReactNode } from 'react'
+import { LanguageContextProvider } from '@context/LanguageContext'
 import { ThemeContextProvider } from '@context/ThemeContext'
 
 interface IProps {
@@ -7,5 +8,9 @@ interface IProps {
 }
 
 export const Wrapper = ({ children }: IProps) => {
-  return <ThemeContextProvider>{children}</ThemeContextProvider>
+  return (
+    <LanguageContextProvider>
+      <ThemeContextProvider>{children}</ThemeContextProvider>
+    </LanguageContextProvider>
+  )
 }
