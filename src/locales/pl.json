@@ -7,5 +7,11 @@
   "themeLight": "Zmień motyw na jasny",
   "themeDark": "Zmień motyw na ciemny",
   "pageTitle": "Jakub Wilk | Programista",
-  "pageDescription": "Jakub Wilk | programista Front-End pracujący głównie w technologii React i TypeScript, zaś po godzinach NodeJS i różne gry"
+  "pageDescription": "Jakub Wilk | programista Front-End pracujący głównie w technologii React i TypeScript, zaś po godzinach NodeJS i różne gry",
+  "github": "Github",
+  "githubDescription": "Zerknij na mój kod na Githubie",
+  "githubTitle": "Przejdź do profilu GitHub",
+  "linkedin": "Linkedin",
+  "linkedinDescription": "Zobacz mój profil programisty na Linkedin",
+  "linkedinTitle": "Przejdź do profilu Linkedin"
 }

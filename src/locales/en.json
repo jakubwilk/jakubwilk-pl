@@ -7,5 +7,11 @@
   "themeLight": "Switch to light theme",
   "themeDark": "Switch to dark theme",
   "pageTitle": "Jakub Wilk | Programmer",
-  "pageDescription": "Jakub Wilk | Front-End developer working with React and TypeScript tech, NodeJS and video games after hours"
+  "pageDescription": "Jakub Wilk | Front-End developer working with React and TypeScript tech, NodeJS and video games after hours",
+  "github": "Github",
+  "githubDescription": "Look at my code on Github",
+  "githubTitle": "Move to Github site",
+  "linkedin": "Linkedin",
+  "linkedinDescription": "Check my profile on Linkedin",
+  "linkedinTitle": "Move to Linkedin site"
 }
