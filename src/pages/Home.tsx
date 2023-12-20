@@ -1,10 +1,10 @@
 'use client'
 import { useEffect } from 'react'
+import Header from '@components/Header'
+import SocialsGrid from '@components/SocialsGrid'
 import { ThemeTypesEnum } from '@enums/ThemeEnums'
 import { useThemeContext } from '@hooks/useThemeContext'
 import { useTranslation } from '@hooks/useTranslation'
-
-import Header from '@/components/Header'
 
 export default function HomePage() {
   const { theme } = useThemeContext()
@@ -29,6 +29,7 @@ export default function HomePage() {
           <span>{t('name')}</span>
         </h1>
         <p className={'description'}>{t('description')}</p>
+        <SocialsGrid />
       </main>
     </div>
   )

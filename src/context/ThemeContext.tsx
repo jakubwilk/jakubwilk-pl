@@ -1,3 +1,5 @@
+'use client'
+
 import { createContext, ReactNode, useCallback, useMemo, useState } from 'react'
 import { ThemeTypesEnum } from '@enums/ThemeEnums'
 import { ThemeContextType } from '@models/theme.models'

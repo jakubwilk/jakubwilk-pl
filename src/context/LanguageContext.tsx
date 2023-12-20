@@ -1,3 +1,5 @@
+'use client'
+
 import { createContext, ReactNode, useCallback, useMemo, useState } from 'react'
 import { LanguageTypesEnum } from '@enums/LanguageEnum'
 import { LanguageContextType } from '@models/language.model'
