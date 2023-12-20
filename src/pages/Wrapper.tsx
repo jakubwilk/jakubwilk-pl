@@ -7,7 +7,7 @@ interface IProps {
   children: ReactNode
 }
 
-export const Wrapper = ({ children }: IProps) => {
+export default function Wrapper({ children }: IProps) {
   return (
     <LanguageContextProvider>
       <ThemeContextProvider>{children}</ThemeContextProvider>
