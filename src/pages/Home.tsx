@@ -21,7 +21,7 @@ export default function HomePage() {
   return (
     <div className={'container mx-auto relative'}>
       <Header />
-      <main className={'flex flex-col items-center justify-center min-h-screen'}>
+      <main className={'flex flex-col items-center justify-center min-h-screen px-4'}>
         <h1>{'👋 Cześć, jestem Jakub'}</h1>
         <p>{'Jestem programistą Front-End'}</p>
       </main>
