@@ -1,16 +1,61 @@
 'use client'
 
+import { useEffect, useMemo, useState } from 'react'
+import { Triangle } from 'react-loader-spinner'
+import { GamesError } from '@components/games/GamesError'
+import { ThemeTypesEnum } from '@enums/ThemeEnums'
+import { useThemeContext } from '@hooks/useThemeContext'
 import { useTranslation } from '@hooks/useTranslation'
+import { IGames } from '@models/games.models'
 
 export function GamesSection() {
   const { t } = useTranslation()
+  const { theme } = useThemeContext()
+  const [data, setData] = useState([])
+  const [isLoading, setIsLoading] = useState(true)
+  const [error, setError] = useState<string | null>(null)
+
+  const spinnerColor = useMemo(
+    () => (theme === ThemeTypesEnum.LIGHT ? '#2b2b2b' : '#f4f4f4'),
+    [theme],
+  )
+
+  useEffect(() => {
+    fetch('https://proxy-jakubwilk.underwolfstudio.com/games/ids=1245620')
+      .then((res) => res.json())
+      .then((res: Array<IGames>) => console.log('res', res))
+      // eslint-disable-next-line no-unused-vars
+      .catch((err) => {
+        setError(t('gamesSectionRequestError'))
+      })
+      .finally(() => setIsLoading(false))
+
+    return () => {
+      setIsLoading(false)
+    }
+  }, [])
 
   return (
     <div className={'mt-24'}>
       <h1 className={'pb-4 title text-center title-2'}>{`🎉 ${t(
         'gamesSectionTitle',
       )}`}</h1>
-      <p className={'description'}>{t('gamesSectionDescription')}</p>
+      <p className={'text-center description'}>{t('gamesSectionDescription')}</p>
+      {!isLoading ? (
+        <div className={'w-full flex justify-center mt-8'}>
+          <Triangle
+            visible={true}
+            height={'50'}
+            width={'50'}
+            color={spinnerColor}
+            ariaLabel={'triangle-loading'}
+            wrapperClass={'games-loader'}
+          />
+        </div>
+      ) : (
+        'dane'
+      )}
+      {error && <GamesError error={error} />}
     </div>
   )
 }
