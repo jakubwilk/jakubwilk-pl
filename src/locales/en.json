@@ -15,5 +15,6 @@
   "linkedinDescription": "Check my profile on Linkedin",
   "linkedinTitle": "Move to Linkedin site",
   "gamesSectionTitle": "Games statistics",
-  "gamesSectionDescription": "Some titles which I want to show"
+  "gamesSectionDescription": "Some titles which I want to show",
+  "gamesSectionRequestError": "Something is wrong with connection. Try again later, please"
 }
