@@ -1,6 +1,6 @@
 'use client'
-import HeaderLanguageSwitcher from '@components/HeaderLanguageSwitcher'
-import HeaderThemeSwitcher from '@components/HeaderThemeSwitcher'
+import HeaderLanguageSwitcher from '@components/header/HeaderLanguageSwitcher'
+import HeaderThemeSwitcher from '@components/header/HeaderThemeSwitcher'
 
 export default function Header() {
   return (
