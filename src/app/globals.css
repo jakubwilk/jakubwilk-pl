@@ -66,6 +66,10 @@
   text-transform: uppercase;
 }
 
+.title-2 {
+  font-size: 2rem;
+}
+
 .title > span {
   font-weight: 700;
 }
