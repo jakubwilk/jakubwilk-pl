@@ -124,3 +124,13 @@
 .light-theme .card:focus {
   transform: translateY(-10%);
 }
+
+.games-error {
+  background-color: #e74c3c;
+}
+
+.games-error p {
+  color: #f4f4f4;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
