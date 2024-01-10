@@ -2,16 +2,17 @@
 
 import { useEffect, useMemo, useState } from 'react'
 import { Triangle } from 'react-loader-spinner'
+import { GameItem } from '@components/games/GameItem'
 import { GamesError } from '@components/games/GamesError'
 import { ThemeTypesEnum } from '@enums/ThemeEnums'
 import { useThemeContext } from '@hooks/useThemeContext'
 import { useTranslation } from '@hooks/useTranslation'
-import { IGames } from '@models/games.models'
+import { IGames, IGamesResponse } from '@models/games.models'
 
 export function GamesSection() {
   const { t } = useTranslation()
   const { theme } = useThemeContext()
-  const [data, setData] = useState([])
+  const [data, setData] = useState<Array<IGames>>([])
   const [isLoading, setIsLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
 
@@ -21,18 +22,23 @@ export function GamesSection() {
   )
 
   useEffect(() => {
-    fetch('https://proxy-jakubwilk.underwolfstudio.com/games/ids=1245620')
+    fetch('https://proxy-jakubwilk.underwolfstudio.com/games/ids=1245620', {
+      method: 'GET',
+    })
       .then((res) => res.json())
-      .then((res: Array<IGames>) => console.log('res', res))
-      // eslint-disable-next-line no-unused-vars
-      .catch((err) => {
-        setError(t('gamesSectionRequestError'))
+      .then((response: IGamesResponse) => {
+        setData(response.data)
+        setIsLoading(false)
       })
-      .finally(() => setIsLoading(false))
+      .catch(() => {
+        setError(t('gamesSectionRequestError'))
+        setIsLoading(false)
+      })
 
     return () => {
       setIsLoading(false)
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return (
@@ -41,7 +47,7 @@ export function GamesSection() {
         'gamesSectionTitle',
       )}`}</h1>
       <p className={'text-center description'}>{t('gamesSectionDescription')}</p>
-      {!isLoading ? (
+      {isLoading ? (
         <div className={'w-full flex justify-center mt-8'}>
           <Triangle
             visible={true}
@@ -52,10 +58,15 @@ export function GamesSection() {
             wrapperClass={'games-loader'}
           />
         </div>
+      ) : error ? (
+        <GamesError error={error} />
       ) : (
-        'dane'
+        <div className={'flex sm:grid sm:grid-cols-2 md:grid-cols-3 gap-8 mt-8'}>
+          {data.map((game) => (
+            <GameItem key={game.appid} game={game} />
+          ))}
+        </div>
       )}
-      {error && <GamesError error={error} />}
     </div>
   )
 }
