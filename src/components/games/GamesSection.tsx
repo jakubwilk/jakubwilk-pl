@@ -5,13 +5,16 @@ import { Triangle } from 'react-loader-spinner'
 import { GameItem } from '@components/games/GameItem'
 import { GamesError } from '@components/games/GamesError'
 import { ThemeTypesEnum } from '@enums/ThemeEnums'
+import { useLanguageContext } from '@hooks/useLanguageContext'
 import { useThemeContext } from '@hooks/useThemeContext'
 import { useTranslation } from '@hooks/useTranslation'
 import { IGames, IGamesResponse } from '@models/games.models'
+import { isNil } from 'lodash'
 
 export function GamesSection() {
   const { t } = useTranslation()
   const { theme } = useThemeContext()
+  const { lang } = useLanguageContext()
   const [data, setData] = useState<Array<IGames>>([])
   const [isLoading, setIsLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
@@ -22,7 +25,9 @@ export function GamesSection() {
   )
 
   useEffect(() => {
-    fetch('https://proxy-jakubwilk.underwolfstudio.com/games/ids=1245620', {
+    const gamesIds = '1245620'
+
+    fetch(`https://proxy-jakubwilk.underwolfstudio.com/games/ids=${gamesIds}`, {
       method: 'GET',
     })
       .then((res) => res.json())
@@ -41,8 +46,15 @@ export function GamesSection() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
+  useEffect(() => {
+    if (!isNil(error)) {
+      setError(t('gamesSectionRequestError'))
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [lang])
+
   return (
-    <div className={'mt-24'}>
+    <div className={'w-full mt-24'}>
       <h1 className={'pb-4 title text-center title-2'}>{`🎉 ${t(
         'gamesSectionTitle',
       )}`}</h1>
@@ -58,10 +70,14 @@ export function GamesSection() {
             wrapperClass={'games-loader'}
           />
         </div>
-      ) : error ? (
+      ) : !isNil(error) ? (
         <GamesError error={error} />
       ) : (
-        <div className={'flex sm:grid sm:grid-cols-2 md:grid-cols-3 gap-8 mt-8'}>
+        <div
+          className={
+            'w-full md:max-w-[70vw] mx-auto flex sm:grid md:grid-cols-2 xl:grid-cols-3 gap-8 mt-8'
+          }
+        >
           {data.map((game) => (
             <GameItem key={game.appid} game={game} />
           ))}
