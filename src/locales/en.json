@@ -16,5 +16,9 @@
   "linkedinTitle": "Move to Linkedin site",
   "gamesSectionTitle": "Games statistics",
   "gamesSectionDescription": "Some titles which I want to show",
-  "gamesSectionRequestError": "Something is wrong with connection. Try again later, please"
+  "gamesSectionRequestError": "Something is wrong with connection. Try again later, please",
+  "gamesSectionStatusActive": "In progress",
+  "gamesSectionStatusInactive": "Finished",
+  "gamesSectionStatsAllTime": "All time: ",
+  "gamesSectionStatsDeaths": "Deaths: "
 }

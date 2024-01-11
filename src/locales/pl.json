@@ -16,5 +16,9 @@
   "linkedinTitle": "Przejdź do profilu Linkedin",
   "gamesSectionTitle": "Statystyki gier",
   "gamesSectionDescription": "Niektóre tytuły warte uwiecznienia",
-  "gamesSectionRequestError": "Wystąpił problem z połączeniem. Proszę spróbować później"
+  "gamesSectionRequestError": "Wystąpił problem z połączeniem. Proszę spróbować później",
+  "gamesSectionStatusActive": "W trakcie",
+  "gamesSectionStatusInactive": "Zakończone",
+  "gamesSectionStatsAllTime": "Czas ogólny: ",
+  "gamesSectionStatsDeaths": "Śmierci: "
 }
