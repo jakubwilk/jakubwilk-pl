@@ -25,7 +25,7 @@ export function GamesSection() {
   )
 
   useEffect(() => {
-    const gamesIds = '1245620'
+    const gamesIds = '1245620&485510'
 
     fetch(`https://proxy-jakubwilk.underwolfstudio.com/games/ids=${gamesIds}`, {
       method: 'GET',
