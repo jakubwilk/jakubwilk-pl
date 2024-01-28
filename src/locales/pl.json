@@ -18,6 +18,7 @@
   "gamesSectionDescription": "Niektóre tytuły warte uwiecznienia",
   "gamesSectionRequestError": "Wystąpił problem z połączeniem. Proszę spróbować później",
   "gamesSectionStatusActive": "W trakcie",
+  "gamesSectionStatusPending": "Przerwane",
   "gamesSectionStatusInactive": "Zakończone",
   "gamesSectionStatsAllTime": "Czas ogólny: ",
   "gamesSectionStatsDeaths": "Śmierci: "
