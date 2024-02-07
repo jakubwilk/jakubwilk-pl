@@ -14,12 +14,17 @@
   "linkedin": "Linkedin",
   "linkedinDescription": "Zobacz mój profil programisty na Linkedin",
   "linkedinTitle": "Przejdź do profilu Linkedin",
+  "apiRequestError": "Wystąpił problem z połączeniem. Proszę spróbować później",
+  "projectsSectionTitle": "Własne projekty",
+  "projectsSectionDescription": "Projekty, które warto wyróżnić",
+  "projectsSectionStatusActive": "W trakcie realizacji",
+  "projectSectionStatusFinished": "Zakończony / Wydany",
   "gamesSectionTitle": "Statystyki gier",
   "gamesSectionDescription": "Niektóre tytuły warte uwiecznienia",
-  "gamesSectionRequestError": "Wystąpił problem z połączeniem. Proszę spróbować później",
   "gamesSectionStatusActive": "W trakcie",
   "gamesSectionStatusPending": "Przerwane",
   "gamesSectionStatusInactive": "Zakończone",
   "gamesSectionStatsAllTime": "Czas ogólny: ",
-  "gamesSectionStatsDeaths": "Śmierci: "
+  "gamesSectionStatsDeaths": "Śmierci: ",
+  "comingSoon": "Wkrótce dostepne"
 }

@@ -14,12 +14,17 @@
   "linkedin": "Linkedin",
   "linkedinDescription": "Check my profile on Linkedin",
   "linkedinTitle": "Move to Linkedin site",
+  "apiRequestError": "Something is wrong with connection. Try again later, please",
+  "projectsSectionTitle": "My own projects",
+  "projectsSectionDescription": "Projects I want to share",
+  "projectsSectionStatusActive": "In implementation",
+  "projectSectionStatusFinished": "Finished / Released",
   "gamesSectionTitle": "Games statistics",
   "gamesSectionDescription": "Some titles which I want to show",
-  "gamesSectionRequestError": "Something is wrong with connection. Try again later, please",
   "gamesSectionStatusActive": "In progress",
   "gamesSectionStatusPending": "Suspended",
   "gamesSectionStatusInactive": "Finished",
   "gamesSectionStatsAllTime": "All time: ",
-  "gamesSectionStatsDeaths": "Deaths: "
+  "gamesSectionStatsDeaths": "Deaths: ",
+  "comingSoon": "Soon available"
 }
