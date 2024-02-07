@@ -12,8 +12,3 @@ export interface IProjectTech {
   name: string
   id: string
 }
-
-export interface IProjectsResponse {
-  status: number
-  data: Array<IProject>
-}

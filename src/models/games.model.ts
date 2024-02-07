@@ -13,8 +13,3 @@ export interface IGames {
   statusText: string
   isActive: boolean
 }
-
-export interface IGamesResponse {
-  status: number
-  data: Array<IGames>
-}
