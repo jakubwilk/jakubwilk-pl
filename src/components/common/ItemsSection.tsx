@@ -72,7 +72,7 @@ export function ItemsSection<T extends Array<IGames | IProject>>({
           )}
         </div>
       )}
-      {isEmpty(data) && (
+      {isEmpty(data) && isNil(errorText) && (
         <p className={'text-center coming-soon-text'}>{t('comingSoon')}</p>
       )}
     </div>

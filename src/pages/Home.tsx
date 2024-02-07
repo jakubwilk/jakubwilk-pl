@@ -1,5 +1,7 @@
 'use client'
 import { useEffect, useState } from 'react'
+import useGamesQuery from '@api/useGamesQuery'
+import useProjectsQuery from '@api/useProjectsQuery'
 import { ItemsSection } from '@components/common/ItemsSection'
 import Header from '@components/header/Header'
 import { ProfileSocials } from '@components/ProfileSocials'
@@ -7,19 +9,25 @@ import { ThemeTypesEnum } from '@enums/ThemeEnums'
 import { useLanguageContext } from '@hooks/useLanguageContext'
 import { useThemeContext } from '@hooks/useThemeContext'
 import { useTranslation } from '@hooks/useTranslation'
-import { IGames, IGamesResponse } from '@models/games.model'
-import { IProject, IProjectsResponse } from '@models/projects.model'
-import { isNil } from 'lodash'
+import { IGames } from '@models/games.model'
+import { IProject } from '@models/projects.model'
 
 export default function HomePage() {
   const { t } = useTranslation()
   const { theme } = useThemeContext()
   const { lang } = useLanguageContext()
-  const [games, setGames] = useState<Array<IGames>>([])
-  const [isGamesLoading, setIsGamesLoading] = useState(true)
+  const {
+    data: projects,
+    isLoading: isProjectsLoading,
+    isError: isProjectsError,
+  } = useProjectsQuery()
+  const gamesIds = '1245620&485510'
+  const {
+    data: games,
+    isLoading: isGamesLoading,
+    isError: isGamesError,
+  } = useGamesQuery(gamesIds)
   const [gamesError, setGamesError] = useState<string | null>(null)
-  const [projects, setProjects] = useState<Array<IProject>>([])
-  const [isProjectsLoading, setIsProjectsLoading] = useState(true)
   const [projectsError, setProjectsError] = useState<string | null>(null)
 
   useEffect(() => {
@@ -33,57 +41,10 @@ export default function HomePage() {
   }, [theme])
 
   useEffect(() => {
-    const gamesIds = '1245620&485510'
-
-    fetch(`https://proxy-jakubwilk.underwolfstudio.com/games/ids=${gamesIds}`, {
-      method: 'GET',
-    })
-      .then((res) => res.json())
-      .then((response: IGamesResponse) => {
-        setGames(response.data)
-        setIsGamesLoading(false)
-      })
-      .catch(() => {
-        setGamesError(t('apiRequestError'))
-        setIsGamesLoading(false)
-      })
-
-    return () => {
-      setIsGamesLoading(false)
-    }
+    setGamesError(isGamesError ? t('apiRequestError') : null)
+    setProjectsError(isProjectsError ? t('apiRequestError') : null)
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
-
-  useEffect(() => {
-    fetch(`https://proxy-jakubwilk.underwolfstudio.com/projects`, {
-      method: 'GET',
-    })
-      .then((res) => res.json())
-      .then((response: IProjectsResponse) => {
-        setProjects(response.data)
-        setIsProjectsLoading(false)
-      })
-      .catch(() => {
-        setProjectsError(t('apiRequestError'))
-        setIsProjectsLoading(false)
-      })
-
-    return () => {
-      setIsProjectsLoading(false)
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
-
-  useEffect(() => {
-    if (!isNil(gamesError)) {
-      setGamesError(t('apiRequestError'))
-    }
-
-    if (!isNil(projectsError)) {
-      setProjectsError(t('apiRequestError'))
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [lang])
+  }, [lang, isProjectsError])
 
   return (
     <div className={'container mx-auto relative'}>
@@ -96,7 +57,7 @@ export default function HomePage() {
           title={`💻 ${t('projectsSectionTitle')}`}
           description={t('projectsSectionDescription')}
           errorText={projectsError}
-          data={projects}
+          data={projects as Array<IProject>}
           isDataLoading={isProjectsLoading}
           hasGames
         />
@@ -104,7 +65,7 @@ export default function HomePage() {
           title={`🎉 ${t('gamesSectionTitle')}`}
           description={t('gamesSectionDescription')}
           errorText={gamesError}
-          data={games}
+          data={games as Array<IGames>}
           isDataLoading={isGamesLoading}
           hasGames
         />
