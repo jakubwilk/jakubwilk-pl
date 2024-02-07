@@ -74,7 +74,8 @@
   font-weight: 700;
 }
 
-.description {
+.description,
+.coming-soon-text {
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -86,6 +87,14 @@
 
 .dark-theme .description {
   color: #a6a6a6;
+}
+
+.light-theme .coming-soon-text {
+  color: #878787;
+}
+
+.dark-theme .coming-soon-text {
+  color: #898989;
 }
 
 .card {
@@ -125,11 +134,11 @@
   transform: translateY(-10%);
 }
 
-.games-error {
+.connection-error {
   background-color: #e74c3c;
 }
 
-.games-error p {
+.connection-error p {
   color: #f4f4f4;
   font-size: 0.9rem;
   text-transform: uppercase;
@@ -158,28 +167,28 @@
   font-weight: 600;
 }
 
-.game-stats-status {
+.item-stats-status {
   font-weight: 400;
   text-transform: uppercase;
   font-size: 0.8rem;
 }
 
-.light-theme .game-stats-status.status-active {
+.light-theme .item-stats-status.status-active {
   background-color: #2b2b2b;
   color: #f4f4f4;
 }
 
-.dark-theme .game-stats-status.status-active {
+.dark-theme .item-stats-status.status-active {
   background-color: #f4f4f4;
   color: #2b2b2b;
 }
 
-.light-theme .game-stats-status.status-inactive {
+.light-theme .item-stats-status.status-inactive {
   background-color: #d2d2d2;
   color: #808080;
 }
 
-.dark-theme .game-stats-status.status-inactive {
+.dark-theme .item-stats-status.status-inactive {
   background-color: #151515;
   color: #6a6a6a;
 }
