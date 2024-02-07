@@ -10,7 +10,7 @@ import { useThemeContext } from '@hooks/useThemeContext'
 import { useTranslation } from '@hooks/useTranslation'
 import { IGames } from '@models/games.model'
 import { IProject } from '@models/projects.model'
-import { isEmpty, isEqual, isNil } from 'lodash'
+import { isEmpty, isNil } from 'lodash'
 
 interface IProps<T extends Array<IGames | IProject>> {
   title: string
