@@ -1,10 +1,10 @@
 'use client'
 
 import { useMemo } from 'react'
-import { GameSingleStat } from '@components/common/GameSingleStat'
-import { GameStatus } from '@components/common/GameStatus'
+import { ItemStatus } from '@components/common/ItemStatus'
+import { GameSingleStat } from '@components/games/GameSingleStat'
 import { useTranslation } from '@hooks/useTranslation'
-import { IGames } from '@models/games.models'
+import { IGames } from '@models/games.model'
 import Image from 'next/image'
 
 interface IProps {
@@ -29,7 +29,7 @@ export function GameItem({ game }: IProps) {
         </div>
         <Image src={game.image} alt={game.name} width={64} height={64} />
       </div>
-      <GameStatus text={game.statusText} isActive={game.isActive} />
+      <ItemStatus text={game.statusText} isActive={game.isActive} />
     </div>
   )
 }

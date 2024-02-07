@@ -2,7 +2,7 @@
 
 import { createContext, ReactNode, useCallback, useMemo, useState } from 'react'
 import { ThemeTypesEnum } from '@enums/ThemeEnums'
-import { ThemeContextType } from '@models/theme.models'
+import { ThemeContextType } from '@models/theme.model'
 
 export const ThemeContext = createContext<ThemeContextType>({
   theme: ThemeTypesEnum.LIGHT,
