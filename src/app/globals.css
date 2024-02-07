@@ -90,11 +90,13 @@
 }
 
 .light-theme .coming-soon-text {
-  color: #878787;
+  background-color: #2b2b2b;
+  color: #f4f4f4;
 }
 
 .dark-theme .coming-soon-text {
-  color: #898989;
+  background-color: #f4f4f4;
+  color: #2b2b2b;
 }
 
 .card {

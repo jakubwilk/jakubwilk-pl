@@ -73,7 +73,9 @@ export function ItemsSection<T extends Array<IGames | IProject>>({
         </div>
       )}
       {isEmpty(data) && isNil(errorText) && (
-        <p className={'text-center coming-soon-text'}>{t('comingSoon')}</p>
+        <div className={'flex justify-center'}>
+          <p className={'inline-block px-8 py-4 coming-soon-text'}>{t('comingSoon')}</p>
+        </div>
       )}
     </div>
   )
