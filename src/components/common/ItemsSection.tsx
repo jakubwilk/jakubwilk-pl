@@ -2,8 +2,6 @@
 
 import { useMemo } from 'react'
 import { Triangle } from 'react-loader-spinner'
-import useGamesQuery from '@api/useGamesQuery'
-import useProjectsQuery from '@api/useProjectsQuery'
 import { ConnectionError } from '@components/common/ConnectionError'
 import { GameItem } from '@components/games/GameItem'
 import { ProjectItem } from '@components/projects/ProjectItem'
