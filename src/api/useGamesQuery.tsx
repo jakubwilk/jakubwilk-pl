@@ -1,7 +1,8 @@
 'use client'
 
-import { QueryKeyEnum } from '@api/api.keys'
-import { QueryOptions, useQuery } from '@tanstack/react-query'
+import { useEffect, useState } from 'react'
+import { useTranslation } from '@hooks/useTranslation'
+import { IGames } from '@models/games.model'
 
 const getGames = async (gamesIds: string) => {
   const response = await fetch(
@@ -10,17 +11,25 @@ const getGames = async (gamesIds: string) => {
       method: 'GET',
     },
   )
-  const { data } = await response.json()
-
-  return data
+  return await response.json()
 }
 
-const useGamesQuery = (gamesIds: string, options?: QueryOptions) => {
-  return useQuery({
-    queryKey: [QueryKeyEnum.GET_GAMES, gamesIds],
-    queryFn: () => getGames(gamesIds),
-    ...options,
-  })
+const useGamesQuery = (gamesIds: string) => {
+  const { t } = useTranslation()
+  const [isLoading, setIsLoading] = useState(true)
+  const [data, setData] = useState<Array<IGames>>([])
+  const [error, setError] = useState<null | string>(null)
+
+  useEffect(() => {
+    getGames(gamesIds)
+      .then((res) => {
+        setData(res.data)
+      })
+      .catch(() => setError(t('apiRequestError')))
+      .finally(() => setIsLoading(false))
+  }, [gamesIds, t])
+
+  return { data, isLoading, error }
 }
 
 export default useGamesQuery

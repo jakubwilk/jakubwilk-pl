@@ -1,4 +1,5 @@
 import { ReactNode } from 'react'
+import Wrapper from '@pages/Wrapper'
 import { getTranslation } from '@utils/locale.utils'
 import { Metadata } from 'next'
 import { Poppins } from 'next/font/google'
@@ -20,7 +21,9 @@ interface IProps {
 export default function RootLayout({ children }: IProps) {
   return (
     <html lang={'en'}>
-      <body className={poppins.className}>{children}</body>
+      <body className={poppins.className}>
+        <Wrapper>{children}</Wrapper>
+      </body>
     </html>
   )
 }

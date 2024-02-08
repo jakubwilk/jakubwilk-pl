@@ -1,10 +1,4 @@
-import HomePage from '@/pages/Home'
-import Wrapper from '@/pages/Wrapper'
-
+import HomePage from '@pages/Home'
 export default function Home() {
-  return (
-    <Wrapper>
-      <HomePage />
-    </Wrapper>
-  )
+  return <HomePage />
 }

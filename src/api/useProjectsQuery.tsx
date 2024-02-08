@@ -1,24 +1,34 @@
 'use client'
 
-import { QueryOptions, useQuery } from '@tanstack/react-query'
-
-import { QueryKeyEnum } from '@/api/api.keys'
+import { useEffect, useState } from 'react'
+import { useTranslation } from '@hooks/useTranslation'
+import { IProject } from '@models/projects.model'
 
 const getProjects = async () => {
   const response = await fetch('https://proxy-jakubwilk.underwolfstudio.com/projects', {
     method: 'GET',
   })
-  const { data } = await response.json()
-
-  return data
+  return await response.json()
 }
 
-const useProjectsQuery = (options?: QueryOptions) => {
-  return useQuery({
-    queryKey: [QueryKeyEnum.GET_PROJECTS],
-    queryFn: getProjects,
-    ...options,
-  })
+const useProjectsQuery = () => {
+  const { t } = useTranslation()
+  const [isLoading, setIsLoading] = useState(true)
+  const [data, setData] = useState<Array<IProject>>([])
+  const [error, setError] = useState<null | string>(null)
+
+  useEffect(() => {
+    getProjects()
+      .then((res) => {
+        setData(res.data)
+      })
+      .catch(() => {
+        setError(t('apiRequestError'))
+      })
+      .finally(() => setIsLoading(false))
+  }, [t])
+
+  return { data, isLoading, error }
 }
 
 export default useProjectsQuery
