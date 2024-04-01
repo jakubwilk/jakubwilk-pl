@@ -3,6 +3,7 @@ export interface IGames {
   name: string
   image: string
   deaths: number
+  achievements: string
   playtime_2weeks: number
   playtime_disconnected: number
   playtime_forever: number

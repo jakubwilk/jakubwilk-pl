@@ -24,7 +24,7 @@
   "gamesSectionStatusActive": "W trakcie",
   "gamesSectionStatusPending": "Przerwane",
   "gamesSectionStatusInactive": "Zakończone",
-  "gamesSectionStatsAllTime": "Czas ogólny: ",
+  "gamesSectionStatsAchievements": "Osiągnięcia Steam: ",
   "gamesSectionStatsDeaths": "Śmierci: ",
   "comingSoon": "Wkrótce dostepne"
 }

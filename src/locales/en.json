@@ -24,7 +24,7 @@
   "gamesSectionStatusActive": "In progress",
   "gamesSectionStatusPending": "Suspended",
   "gamesSectionStatusInactive": "Finished",
-  "gamesSectionStatsAllTime": "All time: ",
+  "gamesSectionStatsAchievements": "Steam Achievements: ",
   "gamesSectionStatsDeaths": "Deaths: ",
   "comingSoon": "Soon available"
 }
