@@ -17,7 +17,7 @@ export default function HomePage() {
     isLoading: isProjectsLoading,
     error: projectsError,
   } = useProjectsQuery()
-  const gamesIds = '1245620&485510'
+  const gamesIds = '1245620&485510&570940'
   const {
     data: games,
     isLoading: isGamesLoading,
