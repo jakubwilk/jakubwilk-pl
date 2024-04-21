@@ -61,7 +61,7 @@ export function ItemsSection({
       ) : (
         <div
           className={
-            'w-full md:max-w-[70vw] mx-auto flex sm:grid xl:grid-cols-2 2xl:grid-cols-3 gap-8 mt-8'
+            'w-full md:max-w-[70vw] mx-auto flex flex-wrap sm:grid xl:grid-cols-2 2xl:grid-cols-3 gap-8 mt-8'
           }
         >
           {!isNil(data) &&
