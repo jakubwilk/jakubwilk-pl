@@ -1,0 +1,15 @@
+.headerButtonLink {
+  border-radius: 0;
+}
+
+.headerButtonLinkGithub {
+  &:focus-visible {
+    outline: 2px solid var(--mantine-color-gray-5);
+  }
+}
+
+.headerButtonLinkLinkedin {
+  &:focus-visible {
+    outline: 2px solid var(--mantine-color-blue-5);
+  }
+}
