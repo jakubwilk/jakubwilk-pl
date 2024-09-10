@@ -1,10 +1,21 @@
-import { Header } from 'components'
+import { About, Header } from 'components'
+import { MantineProvider } from '@mantine/core'
+
+import '@mantine/core/styles.layer.css'
 
 export default function App() {
   return (
-    <div>
-      <Header />
-      <div>app</div>
-    </div>
+    <MantineProvider
+      theme={{
+        primaryColor: 'orange',
+        fontFamily: 'Barlow, sans-serif',
+        headings: { fontFamily: 'Barlow, sans-serif' },
+      }}
+    >
+      <div className='container lg:max-w-[60vw] mx-auto'>
+        <Header />
+        <About />
+      </div>
+    </MantineProvider>
   )
 }
