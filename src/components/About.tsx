@@ -55,7 +55,7 @@ export default function About() {
           ))}
         </div>
       </section>
-      <aside className='my-16 md:mt-0 md:col-start-7 lg:col-start-8 md:col-end-12'>
+      <aside className='my-16 md:my-0 md:col-start-7 lg:col-start-8 md:col-end-12'>
         <Timeline radius={0} lineWidth={2} bulletSize={18} classNames={{ root: 'px-3' }}>
           <Timeline.Item
             bullet={

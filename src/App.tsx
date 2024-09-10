@@ -1,4 +1,4 @@
-import { About, Header } from 'components'
+import { About, Header, Projects } from 'components'
 import { MantineProvider } from '@mantine/core'
 
 import '@mantine/core/styles.layer.css'
@@ -15,6 +15,7 @@ export default function App() {
       <div className='container lg:max-w-[60vw] mx-auto'>
         <Header />
         <About />
+        <Projects />
       </div>
     </MantineProvider>
   )
