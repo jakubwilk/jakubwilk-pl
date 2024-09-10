@@ -32,7 +32,7 @@ const TECH_STACK: ITechStack[] = [
 
 export default function About() {
   return (
-    <div className='px-4 gap-4 md:grid md:grid-cols-12 lg:gap-8 md:px-8'>
+    <div className='px-4 flex flex-col md:grid md:grid-cols-12 md:gap-4 md:px-8 lg:gap-8'>
       <section className='md:col-start-1 md:col-end-7 lg:col-end-8'>
         <Text className='text-lg'>
           Hi, I'm <span className='font-semibold'>Jakub</span> and professionally I'm a{' '}
@@ -55,11 +55,11 @@ export default function About() {
           ))}
         </div>
       </section>
-      <aside className='md:col-start-7 lg:col-start-8 md:col-end-12'>
+      <aside className='my-16 md:mt-0 md:col-start-7 lg:col-start-8 md:col-end-12'>
         <Timeline radius={0} lineWidth={2} bulletSize={18} classNames={{ root: 'px-3' }}>
           <Timeline.Item
             bullet={
-              <ThemeIcon size={'sm'} color='orange'>
+              <ThemeIcon size={'sm'} color='orange' radius={0}>
                 <IconChevronRight size='0.8rem' />
               </ThemeIcon>
             }
@@ -71,7 +71,7 @@ export default function About() {
           </Timeline.Item>
           <Timeline.Item
             bullet={
-              <ThemeIcon size={'sm'} color='green'>
+              <ThemeIcon size={'sm'} color='green' radius={0}>
                 <IconCheck size='0.8rem' />
               </ThemeIcon>
             }
@@ -83,7 +83,7 @@ export default function About() {
           </Timeline.Item>
           <Timeline.Item
             bullet={
-              <ThemeIcon size={'sm'} color='green'>
+              <ThemeIcon size={'sm'} color='green' radius={0}>
                 <IconCheck size='0.8rem' />
               </ThemeIcon>
             }
