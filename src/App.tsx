@@ -1,7 +1,16 @@
-import { About, Header, Projects } from 'components'
 import { MantineProvider } from '@mantine/core'
 
 import '@mantine/core/styles.layer.css'
+import { createRouter, RouterProvider } from '@tanstack/react-router'
+import { routeTree } from './routeTree.gen'
+
+const router = createRouter({ routeTree })
+
+declare module '@tanstack/react-router' {
+  interface Register {
+    router: typeof router
+  }
+}
 
 export default function App() {
   return (
@@ -12,11 +21,7 @@ export default function App() {
         headings: { fontFamily: 'Barlow, sans-serif' },
       }}
     >
-      <div className='container lg:max-w-[60vw] mx-auto'>
-        <Header />
-        <About />
-        <Projects />
-      </div>
+      <RouterProvider router={router} />
     </MantineProvider>
   )
 }
