@@ -1,4 +1,17 @@
 {
-    "projects": [],
-    "total": 0
+    "projects": [
+        {
+            "id": 1,
+            "name": "MGW Hide Content Plugin",
+            "description": "MGW Hide Content Plugin for MyBB 1.8.x - Advanced content hiding plugin that allows hiding post content from specific user groups using customizable BBCode tags.",
+            "image": "/images/mgw-hide-plugin.jpg",
+            "link": "https://github.com/jakubwilk/mgw-hide-plugin",
+            "technologies": [
+                "PHP",
+                "CSS",
+                "Cursor AI"
+            ]
+        }
+    ],
+    "total": 1
 }
