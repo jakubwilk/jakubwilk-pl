@@ -1,13 +1,4 @@
-import {
-  Badge,
-  Button,
-  Card,
-  CardSection,
-  Divider,
-  Group,
-  Image,
-  Text,
-} from '@mantine/core'
+import { Badge, Button, Card, CardSection, Divider, Image, Text } from '@mantine/core'
 import { IProject } from 'models'
 
 interface IItemProjectProps {
