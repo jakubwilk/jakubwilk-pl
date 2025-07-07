@@ -24,7 +24,9 @@
     /* Paths */
     "paths": {
       "components": ["src/components/index.ts"],
-      "pages": ["src/pages/index.ts"]
+      "pages": ["src/pages/index.ts"],
+      "models": ["src/models/index.ts"],
+      "hooks": ["src/hooks/index.ts"]
     }
   },
   "include": ["src"]
