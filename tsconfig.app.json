@@ -23,7 +23,8 @@
 
     /* Paths */
     "paths": {
-      "components": ["src/components/index.ts"]
+      "components": ["src/components/index.ts"],
+      "pages": ["src/pages/index.ts"]
     }
   },
   "include": ["src"]
