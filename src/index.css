@@ -1,9 +1,10 @@
-@layer tailwind {
-  @tailwind base;
-}
+@import "tailwindcss" layer(tailwind);
 
-@tailwind components;
-@tailwind utilities;
+@layer tailwind {
+  @theme {
+    --font-sans: 'Barlow', sans-serif;
+  }
+}
 
 html {
   height: 100%;

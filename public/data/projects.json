@@ -1,6 +1,19 @@
 {
     "projects": [
         {
+            "id": 2,
+            "name": "MGW Rest API Plugin",
+            "description": "MGW Rest API Plugin for MyBB 1.8.x - A modern, secure REST API plugin for MyBB that provides database proxy connections and user information endpoints with enterprise-grade features.",
+            "image": "/images/mgw-rest-api-plugin.jpg",
+            "link": "https://github.com/jakubwilk/mgw-rest-api-plugin",
+            "technologies": [
+                "PHP",
+                "CSS",
+                "Cursor AI"
+            ],
+            "madeByAI": true
+        },
+        {
             "id": 1,
             "name": "MGW Hide Content Plugin",
             "description": "MGW Hide Content Plugin for MyBB 1.8.x - Advanced content hiding plugin that allows hiding post content from specific user groups using customizable BBCode tags.",
@@ -10,8 +23,9 @@
                 "PHP",
                 "CSS",
                 "Cursor AI"
-            ]
+            ],
+            "madeByAI": true
         }
     ],
-    "total": 1
+    "total": 2
 }
