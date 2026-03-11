@@ -5,6 +5,7 @@ export interface IProject {
   image: string
   link: string
   technologies: string[]
+  madeByAI: boolean
 }
 
 export interface IProjectsResponse {
