@@ -8,8 +8,7 @@
             "link": "https://github.com/jakubwilk/mgw-rest-api-plugin",
             "technologies": [
                 "PHP",
-                "CSS",
-                "Cursor AI"
+                "CSS"
             ],
             "madeByAI": true
         },
@@ -21,8 +20,7 @@
             "link": "https://github.com/jakubwilk/mgw-hide-plugin",
             "technologies": [
                 "PHP",
-                "CSS",
-                "Cursor AI"
+                "CSS"
             ],
             "madeByAI": true
         }

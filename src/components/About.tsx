@@ -9,6 +9,7 @@ import {
   IconBrandMantine,
   IconCheck,
   IconChevronRight,
+  IconBrandDocker,
 } from '@tabler/icons-react'
 import { ReactNode } from 'react'
 
@@ -25,9 +26,11 @@ const TECH_STACK: ITechStack[] = [
   { name: 'NestJS', icon: <IconPointFilled size={14} /> },
   { name: 'Express', icon: <IconPointFilled size={14} /> },
   { name: 'Redux', icon: <IconBrandRedux size={14} /> },
-  { name: 'React Router', icon: <IconPointFilled size={14} /> },
+  { name: 'Tanstack', icon: <IconPointFilled size={14} /> },
   { name: 'Material UI', icon: <IconPointFilled size={14} /> },
   { name: 'Mantine', icon: <IconBrandMantine size={14} /> },
+  { name: 'Docker', icon: <IconBrandDocker size={14} /> },
+  { name: 'n8n', icon: <IconPointFilled size={14} /> },
 ]
 
 export default function About() {
