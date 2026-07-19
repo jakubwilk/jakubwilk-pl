@@ -10,7 +10,7 @@
                 "PHP",
                 "CSS"
             ],
-            "madeByAI": true
+            "madeByAI": false
         },
         {
             "id": 1,
@@ -22,7 +22,7 @@
                 "PHP",
                 "CSS"
             ],
-            "madeByAI": true
+            "madeByAI": false
         }
     ],
     "total": 2
