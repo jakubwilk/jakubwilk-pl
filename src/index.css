@@ -2,7 +2,9 @@
 
 @layer tailwind {
   @theme {
-    --font-sans: 'Barlow', sans-serif;
+    --font-sans: 'Inter', sans-serif;
+    --font-mono: 'IBM Plex Mono', monospace;
+    --color-hairline: var(--mantine-color-gray-3);
   }
 }
 
@@ -16,13 +18,18 @@ body {
   min-height: 100%;
   font-size: 1rem;
   line-height: 1.5;
-  font-family: 'Barlow', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-weight: 400;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--mantine-color-gray-0);
+  background-image:
+    linear-gradient(to right, var(--mantine-color-gray-2) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--mantine-color-gray-2) 1px, transparent 1px);
+  background-size: 64px 64px;
+  background-position: center top;
 }
 
 *::selection {

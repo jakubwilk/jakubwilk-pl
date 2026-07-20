@@ -19,8 +19,10 @@ export default function App() {
     <MantineProvider
       theme={{
         primaryColor: 'orange',
-        fontFamily: 'Barlow, sans-serif',
-        headings: { fontFamily: 'Barlow, sans-serif' },
+        defaultRadius: 0,
+        fontFamily: 'Inter, sans-serif',
+        fontFamilyMonospace: 'IBM Plex Mono, monospace',
+        headings: { fontFamily: 'Inter, sans-serif', fontWeight: '800' },
       }}
     >
       <QueryClientProvider client={queryClient}>
