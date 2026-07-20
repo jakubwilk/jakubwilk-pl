@@ -1,4 +1,4 @@
-import { Button, Title } from '@mantine/core'
+import { Button, Text, Title } from '@mantine/core'
 import classes from './components.module.css'
 import { IconBrandGithub, IconBrandLinkedin } from '@tabler/icons-react'
 import clsx from 'clsx'
@@ -6,11 +6,10 @@ import clsx from 'clsx'
 export default function Header() {
   return (
     <header
-      className={
-        'px-4 pb-4 pt-16 flex flex-col justify-end gap-4 md:gap-8 md:px-8 md:pb-8 md:pt-32'
-      }
+      className='px-4 pb-4 pt-16 flex flex-col justify-end gap-4 border-b border-hairline md:gap-8 md:px-8 md:pb-8 md:pt-32'
     >
-      <Title className='m-0 text-4xl font-extrabold uppercase tracking-widest md:text-6xl'>
+      <Text className={classes.monoLabel}>Front-End Engineer</Text>
+      <Title className='m-0 text-4xl font-extrabold tracking-tight md:text-6xl'>
         Jakub Wilk
       </Title>
       <div className='flex items-center gap-2'>
@@ -21,7 +20,8 @@ export default function Header() {
           target='_blank'
           size='xs'
           color='gray'
-          variant='light'
+          variant='default'
+          classNames={{ label: classes.monoLabel }}
           className={clsx(classes.headerButtonLink, classes.headerButtonLinkGithub)}
         >
           Github
@@ -33,7 +33,8 @@ export default function Header() {
           target='_blank'
           size='xs'
           color='blue'
-          variant='light'
+          variant='default'
+          classNames={{ label: classes.monoLabel }}
           className={clsx(classes.headerButtonLink, classes.headerButtonLinkLinkedin)}
         >
           Linkedin

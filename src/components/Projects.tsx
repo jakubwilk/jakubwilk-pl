@@ -1,7 +1,8 @@
-import { Title, Alert, Loader } from '@mantine/core'
+import { Alert, Loader, Text } from '@mantine/core'
 import useGetProjectsQuery from '../hooks/useGetProjectsQuery'
 import GridProjects from './projects/GridProjects'
 import { useCallback } from 'react'
+import classes from './components.module.css'
 
 export default function Projects() {
   const { data, isLoading } = useGetProjectsQuery()
@@ -9,7 +10,7 @@ export default function Projects() {
   const renderProjects = useCallback(() => {
     if (!isLoading && data && data.total === 0) {
       return (
-        <Alert variant='light' color='gray' radius={0}>
+        <Alert variant='outline' color='gray'>
           Currently there are no projects to display or this part of the site is not ready
           yet.
         </Alert>
@@ -28,10 +29,10 @@ export default function Projects() {
   }, [data, isLoading])
 
   return (
-    <div className='px-4 pb-16 md:px-8 md:pt-8 md:pb-16'>
-      <Title className='mt-0 mb-8 text-3xl font-extrabold uppercase tracking-widest'>
-        Projects
-      </Title>
+    <div className='px-4 py-16 md:px-8 md:py-16'>
+      <Text className={classes.monoLabel} mb={32}>
+        03 / Projects
+      </Text>
       {renderProjects()}
     </div>
   )
