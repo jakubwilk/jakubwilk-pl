@@ -1,6 +1,22 @@
 {
     "projects": [
         {
+            "id": 3,
+            "name": "Mangetsu RAG",
+            "description": "Mangetsu RAG - A RAG-powered chatbot that answers lore and mechanics questions for the Mangetsu roleplay forum using hybrid search over its curated guide content.",
+            "image": "/images/mangetsu-rag.png",
+            "link": "https://github.com/jakubwilk/mangetsu-tutorials-rag",
+            "technologies": [
+                "React",
+                "NextJS",
+                "Prisma",
+                "PostrgeSQL",
+                "LLM",
+                "Discord Auth"
+            ],
+            "madeByAI": false
+        },
+        {
             "id": 2,
             "name": "MGW Rest API Plugin",
             "description": "MGW Rest API Plugin for MyBB 1.8.x - A modern, secure REST API plugin for MyBB that provides database proxy connections and user information endpoints with enterprise-grade features.",
