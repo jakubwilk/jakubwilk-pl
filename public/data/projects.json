@@ -2,10 +2,10 @@
     "projects": [
         {
             "id": 3,
-            "name": "Mangetsu RAG",
-            "description": "Mangetsu RAG - A RAG-powered chatbot that answers lore and mechanics questions for the Mangetsu roleplay forum using hybrid search over its curated guide content.",
-            "image": "/images/mangetsu-rag.png",
-            "link": "https://github.com/jakubwilk/mangetsu-tutorials-rag",
+            "name": "Mangetsu HUB",
+            "description": "Mangetsu HUB - A centralized platform for managing and interacting with the Mangetsu roleplay community, featuring integrated tools and resources.",
+            "image": "/images/mangetsu-hub.png",
+            "link": "https://github.com/jakubwilk/mangetsu-hub",
             "technologies": [
                 "React",
                 "NextJS",
