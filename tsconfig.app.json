@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    "baseUrl": "./",
     "target": "ES2020",
     "useDefineForClassFields": true,
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
@@ -23,10 +22,10 @@
 
     /* Paths */
     "paths": {
-      "components": ["src/components/index.ts"],
-      "pages": ["src/pages/index.ts"],
-      "models": ["src/models/index.ts"],
-      "hooks": ["src/hooks/index.ts"]
+      "components": ["./src/components/index.ts"],
+      "pages": ["./src/pages/index.ts"],
+      "models": ["./src/models/index.ts"],
+      "hooks": ["./src/hooks/index.ts"]
     }
   },
   "include": ["src"]
