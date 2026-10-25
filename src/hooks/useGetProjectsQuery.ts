@@ -2,7 +2,7 @@ import { useQuery, UseQueryOptions } from '@tanstack/react-query'
 import { IProjectsResponse } from 'models'
 
 const getProjects = async () => {
-  const response = await fetch('/data/projects.json')
+  const response = await fetch(`/data/projects.json?v=${Date.now()}`)
   const data: IProjectsResponse[] = await response.json()
 
   return data
